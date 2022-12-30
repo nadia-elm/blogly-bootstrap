@@ -2,15 +2,28 @@
 {% block title %} Users_Page {% endblock %}
 
 {% block content %}
-<ul>
-{% for user in users %}
-<li><a href="/users/{{user.id}}" >{{user.first_name}} {{user.last_name}}</a></li>
+<div  class="card">
+  <div class="card-header">
 
-{% endfor %}
-</ul>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Users</h5>
+    <p class="card-text">
+        <ul>
+        {% for user in users %}
+        <li><a href="/users/{{user.id}}" class="link-dark">{{user.first_name}} {{user.last_name}} </a></li>
+    
+        {% endfor %}
+    </ul>
+</p>
+    
+  </div>
+</div>
+
+
 <form action="/users/new">
-    <input type="submit" value="Add user">
+    <input class="btn btn-secondary" type="submit" value="Add user">
 </form>
-
+</div>
 
 {% endblock%}

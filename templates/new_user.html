@@ -2,16 +2,37 @@
 {% block title %} Users_Page {% endblock %}
 
 {% block content %}
+<div class="card" style="width: 18rem;"></div>
+<div class="card-header">
 <h1>Create a user</h1>
+</div>
+<ul class="list-group list-group-flush">
 <form method="post">
+    <li class="list-group-item">
 <p>First Name :</p>
 <input type="text" placeholder="Enter a first name" name="F">
+</li>
+<li class="list-group-item">
 <p>Lirst Name :</p>
 <input type="text" placeholder="Enter a last name" name="L">
+</li>
+<li class="list-group-item">
 <p>Image URL :</p>
 <input type="text" placeholder="Provide an image of this user" name="image">
- <input type="submit" value="Add">
-</form>
+</li>
+</ul>
+ <input class="btn btn-success btn-lg"  type="submit" value="Add">
 
+</form>
+</div>
 
 {% endblock%}
+
+  
+        
+   
+   
+       
+       
+       
+   

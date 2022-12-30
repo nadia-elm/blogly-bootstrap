@@ -1,16 +1,25 @@
 {% extends 'base.html' %}
 {% block title %} posts-page {% endblock %}
 {% block content %}
-<h1>Add Post for {{ user.first_name}} {{user.last_name}}</h1>
-<form method="post">
-    <p>Title</p>
-    <input type="text" name="title">
-    <p>Content</p>
-    <input type="text" name="content">
-    <input type="submit" value="Add">
 
-</form>
-<button class="btn btn-outline-primary"><a href="/users/{{user.id }}">Cancel</a></button>
+<div class="card">
+    <h5 class="card-header">Add Post for {{ user.first_name}} {{user.last_name}}</h5>
+    <div class="card-body">
+        <form method="post">
+            <p>Title</p>
+            <input type="text" name="title">
+            <p>Content</p>
+            <input type="text" name="content"><br>
+            <input  class="btn btn-success"type="submit" value="Add">
+        </form>
+        <a href="/users/{{user.id }}" class="btn btn-primary">Cancel</a>
+<!--  -->
+        <!-- <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+</div>
+<!-- <h1>Add Post for {{ user.first_name}} {{user.last_name}}</h1> -->
 
 
 
